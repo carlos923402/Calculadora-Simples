@@ -1,6 +1,8 @@
 from tkinter import *
 import math
 from PIL import Image, ImageTk
+import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 janela = Tk()
 janela.configure(bg="gray")
@@ -174,28 +176,28 @@ def apagar_ultimo_caractere():
     entrada.insert(0, atual[:-1])               
 
 # Botões numéricos
-botao_1 = Button(janela, text="1", padx=40, pady=20, image= imagem_um  ,command=lambda: clicar_numero(1), bd=0, highlightthickness=0, relief="flat")
-botao_2 = Button(janela, text="2", padx=40, pady=20, image= imagem_dois ,command=lambda: clicar_numero(2),  bd=0, highlightthickness=0, relief="flat")
-botao_3 = Button(janela, text="3", padx=40, pady=20, image= imagem_tres ,command=lambda: clicar_numero(3),  bd=0, highlightthickness=0, relief="flat")
-botao_4 = Button(janela, text="4", padx=40, pady=20, image= imagem_quatro ,command=lambda: clicar_numero(4),  bd=0, highlightthickness=0, relief="flat")
-botao_5 = Button(janela, text="5", padx=40, pady=20, image= imagem_cinco ,command=lambda: clicar_numero(5),  bd=0, highlightthickness=0, relief="flat")
-botao_6 = Button(janela, text="6", padx=40, pady=20, image= imagem_seis ,command=lambda: clicar_numero(6),  bd=0, highlightthickness=0, relief="flat")
-botao_7 = Button(janela, text="7", padx=40, pady=20, image= imagem_sete ,command=lambda: clicar_numero(7),  bd=0, highlightthickness=0, relief="flat")
-botao_8 = Button(janela, text="8", padx=40, pady=20, image= imagem_oito ,command=lambda: clicar_numero(8),  bd=0, highlightthickness=0, relief="flat")
-botao_9 = Button(janela, text="9", padx=40, pady=20, image= imagem_nove ,command=lambda: clicar_numero(9),  bd=0, highlightthickness=0, relief="flat")
-botao_0 = Button(janela, text="0", padx=40, pady=20, image= imagem_zero ,command=lambda: clicar_numero(0),  bd=0, highlightthickness=0, relief="flat")
-botao_ponto = Button(janela, text=".", padx=41, pady=20, image= imagem_ponto ,command=lambda: clicar_numero("."),  bd=0, highlightthickness=0, relief="flat")
+botao_1 = Button(janela, image= imagem_um  ,command=lambda: clicar_numero(1), bd=0, highlightthickness=0, relief="flat")
+botao_2 = Button(janela, image= imagem_dois ,command=lambda: clicar_numero(2),  bd=0, highlightthickness=0, relief="flat")
+botao_3 = Button(janela, image= imagem_tres ,command=lambda: clicar_numero(3),  bd=0, highlightthickness=0, relief="flat")
+botao_4 = Button(janela, image= imagem_quatro ,command=lambda: clicar_numero(4),  bd=0, highlightthickness=0, relief="flat")
+botao_5 = Button(janela, image= imagem_cinco ,command=lambda: clicar_numero(5),  bd=0, highlightthickness=0, relief="flat")
+botao_6 = Button(janela, image= imagem_seis ,command=lambda: clicar_numero(6),  bd=0, highlightthickness=0, relief="flat")
+botao_7 = Button(janela, image= imagem_sete ,command=lambda: clicar_numero(7),  bd=0, highlightthickness=0, relief="flat")
+botao_8 = Button(janela, image= imagem_oito ,command=lambda: clicar_numero(8),  bd=0, highlightthickness=0, relief="flat")
+botao_9 = Button(janela, image= imagem_nove ,command=lambda: clicar_numero(9),  bd=0, highlightthickness=0, relief="flat")
+botao_0 = Button(janela, image= imagem_zero ,command=lambda: clicar_numero(0),  bd=0, highlightthickness=0, relief="flat")
+botao_ponto = Button(janela, image= imagem_ponto ,command=lambda: clicar_numero("."),  bd=0, highlightthickness=0, relief="flat")
 
 
 # Botões de operação
-botao_somar = Button(janela, text="+", padx=39, pady=20, image= imagem_mais, command=somar,  bd=0, highlightthickness=0, relief="flat")
-botao_subtrair = Button(janela, text="-", padx=40.5, pady=20, image= imagem_menos, command=subtrair,  bd=0, highlightthickness=0, relief="flat")
-botao_multiplicar = Button(janela, text="x", padx=40.5, pady=20, image= imagem_vezes, command=multiplicar,  bd=0, highlightthickness=0, relief="flat")
-botao_dividir = Button(janela, text="÷", padx=40.5, pady=20, image= imagem_por, command=dividir,  bd=0, highlightthickness=0, relief="flat")
-botao_raiz = Button(janela, text="√", padx=40, pady=20, image= imagem_raizquadrada, command=raiz_quadrada,  bd=0, highlightthickness=0, relief="flat")
-botao_porcento = Button(janela, text="%", padx=40, pady=20, image= imagem_porcentagem, command=porcentagem,  bd=0, highlightthickness=0, relief="flat")
-botao_igual = Button(janela, text="=", padx=88, pady=20, image= imagem_igual, command=igual,  bd=0, highlightthickness=0, relief="flat")
-botao_limpar = Button(janela, text="Limpar", padx=76, pady=20, image= imagem_limpar, command=limpar,  bd=0, highlightthickness=0, relief="flat")
+botao_somar = Button(janela, image= imagem_mais, command=somar,  bd=0, highlightthickness=0, relief="flat")
+botao_subtrair = Button(janela, image= imagem_menos, command=subtrair,  bd=0, highlightthickness=0, relief="flat")
+botao_multiplicar = Button(janela, image= imagem_vezes, command=multiplicar,  bd=0, highlightthickness=0, relief="flat")
+botao_dividir = Button(janela, image= imagem_por, command=dividir,  bd=0, highlightthickness=0, relief="flat")
+botao_raiz = Button(janela, image= imagem_raizquadrada, command=raiz_quadrada,  bd=0, highlightthickness=0, relief="flat")
+botao_porcento = Button(janela, image= imagem_porcentagem, command=porcentagem,  bd=0, highlightthickness=0, relief="flat")
+botao_igual = Button(janela, image= imagem_igual, command=igual,  bd=0, highlightthickness=0, relief="flat")
+botao_limpar = Button(janela, image= imagem_limpar, command=limpar,  bd=0, highlightthickness=0, relief="flat")
 
 
 
