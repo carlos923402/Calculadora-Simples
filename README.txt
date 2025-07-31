@@ -1,6 +1,6 @@
 Calculadora Simples - Python + Tkinter
 
-Este projeto é uma calculadora gráfica feita com Python usando as bibliotecas Tkinter e Math. Você pode realizar operações matemáticas básicas como adição, subtração, multiplicação, divisão, raiz quadrada e porcentagem.
+Este projeto é uma calculadora gráfica feita com Python usando as bibliotecas Tkinter, Pillow, Math e Os. Você pode realizar operações matemáticas básicas como adição, subtração, multiplicação, divisão, raiz quadrada e porcentagem.
 
 
 Requisitos para o funcionamento do código: 
