@@ -2,18 +2,16 @@ from tkinter import *
 import math
 from PIL import Image, ImageTk
 import os
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
+os.chdir(os.path.dirname(os.path.abspath(__file__))) #Permite que o caminho seja sempre o da pasta do arquivo .py
 
+#Criando a interface da calculadora:
 janela = Tk()
 janela.configure(bg="gray")
-
-
-
 janela.title("Calculadora Simples")
 janela.geometry("320x300")
 
+#Criar e personalizar painel da calculadora:
 entrada = Entry(janela, bg="#DBE6F0", fg="#000000", font=("Arial", 14), relief="flat", justify="right", insertbackground="black")
-
 entrada.grid(row=0, column=0, columnspan=8, padx=10, pady=10, sticky="we")
 
 
@@ -47,15 +45,15 @@ janela.iconphoto(False, icone)
 
 #Definir funções para os botões:
 
-def clicar_numero(numero):
+def clicar_numero(numero): #Função para o clique dos números
     atual = entrada.get()
     entrada.delete(0, END)
     entrada.insert(0, str(atual) + str(numero))
 
-def limpar():
+def limpar(): #Função para limpar os resultados
     entrada.delete(0, END)
 
-def somar():
+def somar(): #Função para fazer a soma dos números
     try:
         primeiro_numero = entrada.get()
         global n1
@@ -66,7 +64,7 @@ def somar():
     except ValueError:
         entrada.delete(0, END)
 
-def subtrair():
+def subtrair(): #Função para fazer a subtração dos números
     try:
         primeiro_numero = entrada.get()
         global n1
@@ -77,7 +75,7 @@ def subtrair():
     except ValueError:
         entrada.delete(0, END)
 
-def multiplicar():
+def multiplicar(): #Função para fazer a multiplicação dos números
     try:
         primeiro_numero = entrada.get()
         global n1
@@ -88,7 +86,7 @@ def multiplicar():
     except ValueError:
         entrada.delete(0, END)
 
-def dividir():
+def dividir(): #Função para fazer a divisão dos números
     try:
         primeiro_numero = entrada.get()
         global n1
@@ -101,7 +99,7 @@ def dividir():
      
        
 
-def raiz_quadrada():
+def raiz_quadrada(): #Função para fazer a radiciação dos números
     try:
         numero = float(entrada.get())
         resultado = math.sqrt(numero)
@@ -111,7 +109,7 @@ def raiz_quadrada():
         entrada.delete(0, END)
         
 
-def porcentagem():
+def porcentagem(): #Função para fazer a razão dos números
     try:
         numero = float(entrada.get())
         resultado = numero / 100
@@ -121,7 +119,7 @@ def porcentagem():
         entrada.delete(0, END)
                    
 
-def igual():
+def igual(): #Função para dar o resultado das operações
     segundo_numero = entrada.get()
     entrada.delete(0, END)
     try:
@@ -141,6 +139,7 @@ def igual():
         entrada.insert(0, "Erro")
     except:            
         entrada.delete(0, END)
+
 #Usar teclas:
 def pressionar_tecla(event):
     tecla = event.char
@@ -170,7 +169,7 @@ def pressionar_tecla(event):
 
 janela.bind("<Key>", pressionar_tecla)     
 
-def apagar_ultimo_caractere():
+def apagar_ultimo_caractere(): 
     atual = entrada.get()
     entrada.delete(0, END)
     entrada.insert(0, atual[:-1])               
